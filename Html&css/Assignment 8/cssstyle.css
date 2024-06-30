@@ -1,0 +1,170 @@
+.container {
+    display: flex;
+
+
+}
+
+.boxA {
+    width: 30%;
+
+    border: 2px solid black;
+
+}
+
+.btn1 {
+    width: 350px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 10%;
+    border: none;
+    box-shadow: 5px 6px grey;
+    background-color: blue;
+}
+
+.boxB {
+    width: 70%;
+    border: 2px solid black;
+    
+}
+
+.heading {
+    background-color: blue;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    border: 1px solid black;
+
+
+}
+
+.label {
+    margin-left: 20px;
+    font-family: Arial;
+    color: white;
+}
+
+.logout {
+    color: white;
+    font-size: 20px;
+    margin-left: 460px;
+    margin-top: 15px;
+
+}
+
+.box1 {
+    
+    height: 130px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.imp1 {
+    width: 170px;
+    height: 80px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(224, 218, 223);
+    margin-top: 20px;
+
+
+
+}
+
+.imp2 {
+    width: 170px;
+    height: 80px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(224, 218, 223);
+    margin-top: 20px;
+
+}
+
+.imp3 {
+    width: 170px;
+    height: 80px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(224, 218, 223);
+    margin-top: 20px;
+
+}
+
+.imp4 {
+    width: 170px;
+    height: 80px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(224, 218, 223);
+    margin-top: 20px;
+    margin-right: 0px;
+
+
+}
+/*   middle table div */
+.box2 {
+    
+    width: 100%;
+    height: 170px;
+}
+
+.t1,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.t1,
+td {
+    border-bottom: 1px solid black;
+}
+
+.t1 {
+
+    border: 1px solid gray;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.pk {
+    width: 130px;
+    color: blue;
+
+}
+
+.box3 {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.t2 {
+    margin-top: 20px;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    margin-left: 40px;
+    margin-bottom: 60px;
+}
+
+.t2,
+th,
+td {
+
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+
+img {
+    width: 500px;
+    height: 250px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+}
