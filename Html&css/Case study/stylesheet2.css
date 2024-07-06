@@ -1,0 +1,191 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.heading {
+    background-color: green;
+    height: 60px;
+    display: flex;
+
+}
+
+.label {
+    color: white;
+    font-family: Arial;
+    font-size: 38px;
+    margin-left: 20px;
+    margin-top: 5px;
+
+}
+
+.btn1 {
+    margin-left: 870px;
+    width: 80px;
+    height: 25px;
+    padding-bottom: 1px;
+    margin-top: 7px;
+   
+}
+.btn2 {
+    width: 80px;
+    height: 25px;
+    padding-bottom: 1px;
+    margin-top: 7px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+button {
+    text-decoration: none;
+    position: relative;
+    border: none;
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    color: #fff;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+  }
+  
+  button:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+  }
+  
+  @keyframes ani {
+    0% {
+      background-position: 0%;
+    }
+  
+    100% {
+      background-position: 400%;
+    }
+  }
+  
+  button:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 20px;
+    transition: 1s;
+  }
+  
+  button:hover::before {
+    filter: blur(20px);
+  }
+  
+  button:active {
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  }
+  
+
+/*----------------    PART- A ------------------     */
+.container {
+    display: flex;
+}
+
+.boxA {
+    width: 25%;
+    height: 870px;
+    border: 1px solid black;
+}
+
+.box1 {
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 5px 20px 20px 10px;
+}
+
+.box2 {
+    border: 2px solid black;
+    margin: 10px 20px 0px 10px;
+    padding: 5px 20px 20px 10px;
+}
+
+.box3 {
+    border: 2px solid black;
+    margin: 10px 20px 0px 10px;
+    padding: 5px 20px 20px 10px;
+    height: 200px;
+    position: relative;
+}
+.icons{
+    position: absolute;
+    top: 5px;
+    right: 60px;
+}
+.icons i{
+    font-size: 12px;
+    
+}
+.search-bar {
+    width: 280px;
+    padding-left: 10px;
+}
+
+
+/* ------------------ PART-B -------------------------*/
+.boxB {
+    width: 75%;
+    border: 1px solid black;
+}
+
+.boxI {
+    margin-top: 10px;
+    height: 290px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    
+    height: 250px;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 5px 8px 5px 8px;
+    border: 2px solid black;
+    border-radius: 30px;
+    box-shadow: 8px 3px 10px 4px gray;
+
+
+}
+.card:hover{
+    transform: scale(1.1,1.1);
+}
+
+.cardimg {
+    width: 160px;
+    height: 80px;
+    margin-left: 13px;
+    border: 2px solid black;
+    margin-top: 10px;
+    
+}
+
+.boxII {
+    height: 290px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.boxIII {
+    height: 290px;
+    display: flex;
+    justify-content: space-around;
+}  
