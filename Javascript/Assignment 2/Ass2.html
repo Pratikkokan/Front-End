@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section{
+    border:1px solid;
+    margin:10px 20px 10px 20px;
+    padding:20px;
+    background-color: rgb(254, 255, 255);
+}
+
+.item{
+    width:300px;
+    margin:10px;
+    padding:5px;
+    border:1px solid grey;
+    background-color: rgb(255, 243, 245);
+}
+    </style>
+</head>
+<body>
+    <h1>JavaScript Radio Button event handling</h1>
+  
+    <div class="section">
+        <div class="item">
+            <input type="checkbox" id="c1" value="Python Programming" onchange="selectOption(this)"/>
+            <label for="c1">Python Programming</label>
+        </div>
+
+        <div class="item">
+            <input type="checkbox" id="c2" value="Java Programming" onchange="selectOption(this)"/>
+            <label for="c2">Java Programming</label>
+        </div>
+
+        <div class="item">
+            <input type="checkbox" id="c3" value="Swift Programming" onchange="selectOption(this)"/>
+            <label for="c3">Swift Programming</label>
+        </div>
+
+        <div class="item">
+            <input type="checkbox" id="c4" value="Javascript Programming" onchange="selectOption(this)"/>
+            <label for="c4">Javascript Programming</label>
+        </div>
+
+        <h3 id="ch-ans">null</h3>
+    </div>
+    <script>
+          var uniqueCourse = new Set();           //only allow user to add unique item
+        function selectOption(target)
+        {
+            //console.log(target.value);
+            if(target.checked==true)
+                uniqueCourse.add(target.value);
+            else
+                uniqueCourse.delete(target.value);
+
+            console.log(uniqueCourse);
+
+            document.getElementById("ch-ans").innerHTML = Array.from(uniqueCourse);
+
+
+        }
+    </script>
+</body>
+</html>

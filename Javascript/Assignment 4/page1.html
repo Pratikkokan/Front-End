@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ASCII Code Finder</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  
+  <div class="section">
+    <div class="box1">
+      <img src="img/images.jpeg" alt="">
+    </div>
+    <div class="box2">
+
+      <h2 class="question-title">
+        <i class="fa-regular fa-circle-question"></i>
+        Ask user to input any character in the textbox and show its ASCII Code on webpage using javascript function
+
+      </h2>
+
+      <div class="que-description">
+        <ol>
+          <li>ASCII code of lowercase "a to z" is 97 - 122 .</li>
+          <li>ASCII code of uppercase "A to Z" is 97 - 90 .</li>
+        </ol>
+      </div>
+
+      <div class="question-body">
+        <input type="text" id="input" maxlength="1" placeholder="Enter a character">
+        <br><br>
+
+        <button onclick="getASCII()">Get ASCII Code</button>
+        <br>
+        <p id="output"></p>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+  <script>
+    function getASCII() {
+      // Get the text box element
+      var inputText = document.getElementById("input");
+
+      // Get the character entered in the text box
+      var char = inputText.value;
+
+      // Ensure only one character is entered
+      if (char.length > 1) {
+        alert("Please enter only one character.");
+        return; // Exit the function if more than one character is entered
+      }
+
+      // Get the ASCII code using charCodeAt()
+      var asciiCode = char.charCodeAt(0);
+
+      // Display the ASCII code in a paragraph element
+      var result = document.getElementById("output");
+      result.textContent = "The ASCII code for '" + char + "' is " + asciiCode;
+    }
+  </script>
+</body>
+
+</html>

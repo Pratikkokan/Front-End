@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="section">
+        <div class="box1">
+            <img src="img/sample-image.jpg" alt="">
+        </div>
+        <div class="box2">
+
+            <h2 class="question-title">
+            
+                <i class="fa-regular fa-circle-question"></i>
+                Check condition and print whether employee is eligible for insurance or not
+                </h2>
+
+
+            <div class="que-description">
+                <ol>
+                    <li>employee is male and age is between 25 to 65</li>
+                    <li>employee is female and age is between 21 to 61</li>
+                </ol>
+            </div>
+            <div class="question-body">
+                <input type="radio" name="gender" id="r1" value="male" onchange="selectGender(this)" />
+                <label for="r1">Male</label>
+                
+                <input type="radio" name="gender" id="r2" value="female" onchange="selectGender(this)">
+                <label for="r2">Female</label>
+                <br><br>
+
+                <input type="text" placeholder="Age" id="client-age">
+            </div>
+             <br>
+             <button onclick="check()">Check</button>
+             
+             <h3 id="display"> </h3>
+            
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
