@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let data = {
+            gadgets: [
+                {
+                    id: 1, category: "laptop", products: [
+                        { company: "hp", configuration: "220GB SSD / 8GB RAM / I3 Intel" },
+                        { company: "lenovo", configuration: "1 TB HDD / 12 GB RAM / I5 Intel" },
+                        { company: "asus", configuration: "500 GB HDD / 250 GB SSD / 8 GB RAM / I7 Intel" }]
+                },
+
+                {
+                    id: 2, category: "smartwatch", products: [
+                        { company: "aple", configuration: "13 Apps / 20 Hrs Standby / 40 Features" },
+                        { company: "samsung", configuration: "14 Apps / 13 Hrs Standby / 34 Features" }]
+                },
+
+                {
+                    id: 3, category: "camera", products: [
+                        { company: "sony", configuration: "40X Zoom / 3 Hrs Standby / 40 GB Storage" },
+                        { company: "cannon", configuration: "30X Zoom / 5 Hrs Standby / 50 GB Storage" }]
+                }
+            ]
+        };
+
+        /* Q3.Write a function to take any gadget name as argument and check that exist in
+array or not. Return "true" if exist otherwise return "false" ? */
+
+
+     let search = "dell";
+        for (let i = 0; i < data.gadgets.length; i++) {
+            for (let j = 0; j < data.gadgets[i].products.length; j++) {
+                //console.log(data.gadgets[i].products[j].company);
+
+                if (data.gadgets[i].products[j].company ===  search ) {
+                    console.log("true");
+
+                }
+                else {
+                    console.log("false");
+                }
+               
+            }
+        }
+
+    </script>
+</body>
+
+</html>

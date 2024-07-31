@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+      let data = {
+            gadgets: [
+                {
+                    id: 1, category: "laptop", products: [
+                        { company: "hp", configuration: "220GB SSD / 8GB RAM / I3 Intel" },
+                        { company: "lenovo", configuration: "1 TB HDD / 12 GB RAM / I5 Intel" },
+                        { company: "asus", configuration: "500 GB HDD / 250 GB SSD / 8 GB RAM / I7 Intel" }]
+                },
+
+                {
+                    id: 2, category: "smartwatch", products: [
+                        { company: "aple", configuration: "13 Apps / 20 Hrs Standby / 40 Features" },
+                        { company: "samsung", configuration: "14 Apps / 13 Hrs Standby / 34 Features" }]
+                },
+
+                {
+                    id: 3, category: "camera", products: [
+                        { company: "sony", configuration: "40X Zoom / 3 Hrs Standby / 40 GB Storage" },
+                        { company: "cannon", configuration: "30X Zoom / 5 Hrs Standby / 50 GB Storage" }]
+                }
+            ]
+        };
+
+    /* Q5.Write a function to prepare array containing product names of each gadget
+    along with its configuration order by product names in each category*/
+
+    var array =[];
+
+    for (let i = 0; i < data.gadgets.length; i++) {
+            for (let j = 0; j < data.gadgets[i].products.length; j++) {
+             
+             array.push([data.gadgets[i].products[j].company] +" " +data.gadgets[i].products[j].configuration);
+            }
+        }
+
+      
+        let obj=Object.keys(array).sort();
+        console.log(obj);
+        console.log(array);
+
+
+        var newupdatedarr = []
+        for (var i = 0; i < Object.keys(array).length; i++) {
+            newupdatedarr[ordered[i]] = array[ordered[i]]
+        }
+
+        console.log(newupdatedarr);
+        
+</script>
+</body>
+</html>
