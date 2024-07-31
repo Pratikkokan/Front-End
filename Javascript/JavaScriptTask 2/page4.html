@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Job Application Screening</h1>
+
+    <br><br><br><br>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <script>
+        let degree = prompt("Enter Degree :").toLowerCase();
+        let exper = prompt("Enter your experience :");
+
+        if (degree === 'bachelors' && exper >= 2) {
+            //console.log("Bachelors with at least 2  years Experience");
+            document.getElementById("p1").innerHTML = "Bachelors with at least 2  years Experience";
+        }
+        else if (degree === 'ph.d' && exper >= 5) {
+            //console.log("Ph.D with at least 5 years Experience ");
+            document.getElementById("p2").innerHTML = "Ph.D with at least 5 years Experience";
+        }
+        else if (degree === 'masters' && exper >= 3) {
+            //   console.log("Masters with at least 3 years experience  ");
+            document.getElementById("p3").innerHTML = "Masters with at least 3 years experience ";
+        }
+        else {
+            //console.log("Invalid input,Try Again");
+            document.getElementById("p4").innerHTML = "Invalid Input, Try Again";
+        }
+    </script>
+</body>
+
+</html>

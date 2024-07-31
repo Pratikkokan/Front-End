@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>JavaScript Ex4</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="section">
+            <h3 class="que-title">Restaurant Bill Splitter</h3>
+            <p class="que">A group of friends went to a Restaurant. write a program to calculate each person's share of the bill,including task and tip,based on the following condition:</p>
+            <ul>
+               <li class="li-1">The tax rate is 8%.</li>
+            </ul>
+            <ul>
+                <li class="li-1">The tip percentage varies:</li>
+                <ul>
+                      <li class="li-2">If the total bill(including tax) is less than $50,the tip is 15%.</li>
+                      <li class="li-2">If the total bill between $50 and $100 (inclusive), the tip is 20%.</li>
+                      <li class="li-2">If the total bill is more than $100, the tip is 25%</li>
+           
+                </ul>
+            </ul>
+            <hr>
+
+            <p class="form-label">Enter the total bill:</p>
+            <input type="text"  id="btn1"/>
+
+            <p class="form-label">Enter number of person:</p>
+            <input type="text" id="btn2"/>
+
+           <div class="btn-group">
+                <button onclick="show()">Enter interview</button>
+            </div>
+        </div>
+        <script>
+            var tip="";
+            function show(){
+                var totalbill=parseFloat(document.getElementById("btn1").value);
+                var nopeople= document.getElementById("btn2").value;
+                console.log(totalbill);
+                console.log(nopeople);
+                var taxrate=0.08;
+                var totalamo=totalbill*taxrate;
+                var totaltax=totalbill+totalamo;
+                if (totaltax < 50) {
+                    tip= 0.15;
+                }
+                else if(totaltax<=100){
+                           tip=0.20;
+                       }
+                       else{
+                        tip=0.25;
+                       }
+                var tipamo=totaltax*tip;
+                var grandtotal=totaltax+tipamo;
+                var perperson=grandtotal/nopeople;
+                console.log(perperson);
+            }
+              
+        </script>
+    </body>
+</html>

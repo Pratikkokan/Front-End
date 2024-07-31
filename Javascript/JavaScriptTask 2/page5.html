@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Get user input with prompts
+        let PurchaseAmount = parseFloat(prompt("Enter the total purchase amount: $"));
+        let loyaltyCard = prompt("Enter your loyalty card status (gold, silver, or none): ").toLowerCase();
+
+        let discount = 0;
+
+        if (PurchaseAmount < 50) {
+            discount = 0;
+        }
+        else if (  PurchaseAmount >=50     && PurchaseAmount < 100) {
+            discount = 0.1;
+        }
+        else {
+            if (loyaltyCard === "gold") {
+                discount =  0.15;
+            }
+            else if (loyaltyCard === "silver") {
+                discount =  0.12;
+            }
+            else {
+                discount =  0.05;
+            }
+        }
+
+        let finalAmount=PurchaseAmount*(1-discount);
+        console.log(finalAmount);
+    </script>
+</body>
+
+</html>
