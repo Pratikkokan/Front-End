@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           var employees = [
+    { name: "Alice Johnson", department: "Marketing", age: 29, yearsAtCompany: 4, 
+            skills: ["SEO", "Content Creation", "Social Media"], email: "alice.johnson@example.com" },
+    { name: "Bob Smith", department: "Engineering", age: 35, yearsAtCompany: 7, 
+            skills: ["Java", "C++", "System Design"], email: "bob.smith@example.com" },
+    { name: "Carol White", department: "HR", age: 40, yearsAtCompany: 10, 
+            skills: ["Recruitment", "Employee Relations", "Training", "Management"], email: "carol.white@example.com" },
+    { name: "Dave Brown", department: "Finance", age: 28, yearsAtCompany: 3, 
+            skills: ["Financial Analysis", "Budgeting", "Tax Planning"], email: "dave.brown@example.com" },
+    { name: "Eve Davis", department: "Engineering", age: 30, yearsAtCompany: 5, 
+            skills: ["Java", "Machine Learning", "Data Analysis"], email: "eve.davis@example.com" }
+];
+
+// Q1. List the names of employees who are younger than 30.
+// Sample Output:
+// Bob Smith
+// Carol White
+console.log("Q1 ]*********")
+             //without
+             for(var i=0;i<employees.length;i++)
+                {
+                    if(employees[i].age>30)
+                    {
+                        console.log(employees[i].name);
+                    }
+                }
+
+             //with
+             let ans1=employees
+                               .filter(item=>item.age > 30)
+                               .map(item=>item.name);
+            console.log(ans1);
+
+
+// Q2. Find the employees who have more than 3 skills listed. Print their names and skills.
+// Sample Output:
+// name: Carol White: ["Recruitment", "Employee Relations", "Training", "Management"
+
+console.log("Q2 ]*****")
+         
+              //without
+              for(let i=0;i<employees.length;i++){
+                if(employees[i].skills.length > 3){
+                    console.log(employees[i].name+": "+employees[i].skills);
+                }
+              }
+
+              //with
+              let ans2=employees.filter(item=>item.skills.length > 3)
+                                .map(item=>{
+                                    return{ name:item.name,skills:item.skills};
+                                });
+                 console.log(ans2);               
+                  
+
+// Q3. Print the names of employees in alphabetical order.
+// Sample Output:
+// Alice Johnson
+// Bob Smith
+// Carol White
+// Dave Brown
+// Eve Davis
+console.log("Q3 ]*****")
+             //without
+             let arr=[];
+             for(let i=0;i<employees.length;i++){
+
+                arr.push(employees[i].name);
+             }                  
+           let name= arr.sort((a,b)=>a.localeCompare(b));
+           console.log(name);
+
+           //with
+           let ans3=employees.map(item=>item.name)
+                             .sort((a,b) =>a.localeCompare(b));
+             console.log(ans3);                
+
+
+// Q4. Print the names of employees who have been at the company for more than 5 years.
+// Sample Output:
+// Bob Smith
+// Carol White
+
+console.log("Q4 ]******")
+          //without
+          for(let i=0;i<employees.length;i++){
+            if(employees[i].yearsAtCompany >5){
+                console.log(employees[i].name);
+            }
+          }
+
+
+          //with
+          let ans4=employees.filter(item=>item.yearsAtCompany>5)
+                            .map(item=>item.name);
+               console.log(ans4);             
+
+
+
+// Q5. List all the skills of employees who work in the "Engineering" department.
+// Sample Output:
+// Bob Smith: ["Java", "C++", "System Design"]
+// Eve Davis: ["Python", "Machine Learning", "Data Analysis"]
+console.log("Q5 ]****")
+             //without
+             for(let i=0;i<employees.length;i++){
+                if(employees[i].department =="Engineering"){
+                    console.log(employees[i].name+" :"+employees[i].skills);
+                }
+             }
+
+             //with
+             let ans5=employees.filter(item=>item.department.includes("Engineering"))
+                               .map(item=>({name:item.name,skills:item.skill}));
+                    console.log(ans5);           
+                    
+
+
+                        
+// Q6. Calculate and print the average age of all employees.
+// Sample Output:
+// 32.4
+console.log("Q6 ]****")
+               //without
+               let total=0;
+               for(let i=0;i<employees.length;i++){
+                total= total + employees[i].age;
+                //total+= employees[i].age;
+               }
+               console.log(total/employees.length);
+
+               //with
+               let ans6=employees.reduce((p,c)=>{ 
+                return p+c.age;
+               },0)/employees.length;
+               console.log(ans6);
+         
+
+
+
+// Q7. Print the email addresses of employees whose skills include "Java".
+// Sample Output:
+// bob.smith@example.com
+//eve.davis@example.com
+console.log("Q7 ]****")
+             //without
+             for(let i=0;i<employees.length;i++){
+                if(employees[i].skills.includes("Java")){
+                    console.log(employees[i].email);
+                }
+             }
+
+             //with
+              let ans7=employees.filter(item=>item.skills.includes("Java"))
+                                .map(item=>item.email)
+                     console.log(ans7);           
+
+
+               
+// Q8. Sort the employees array by age in ascending order and print the sorted array.
+// Sample Output:
+// [
+//   { name: "Dave Brown", department: "Finance", age: 28, yearsAtCompany: 3, skills: ["Financial Analysis", "Budgeting", "Tax Planning"], email: "dave.brown@example.com" },
+//   { name: "Alice Johnson", department: "Marketing", age: 29, yearsAtCompany: 4, skills: ["SEO", "Content Creation", "Social Media"], email: "alice.johnson@example.com" },
+//   { name: "Eve Davis", department: "Engineering", age: 30, yearsAtCompany: 5, skills: ["Python", "Machine Learning", "Data Analysis"], email: "eve.davis@example.com" },
+//   { name: "Bob Smith", department: "Engineering", age: 35, yearsAtCompany: 7, skills: ["Java", "C++", "System Design"], email: "bob.smith@example.com" },
+//   { name: "Carol White", department: "HR", age: 40, yearsAtCompany: 10, skills: ["Recruitment", "Employee Relations", "Training"], email: "carol.white@example.com" }
+// ]
+
+console.log("Q8 ]****")
+              //without
+              let sortarr=[];
+              for(let i=0;i<employees.length;i++){
+                sortarr.push(employees[i]);
+              }
+
+              let newarray=sortarr.sort((a,b)=> a.age - b.age);
+              console.log(newarray);
+
+              //with
+              let ans8=employees.filter(item=>item)
+                                 .sort((a,b)=>a.age -b.age);
+                       console.log(ans8);          
+
+
+// Q9. Count and print the number of employees who have "Social Media" as one of their skills.
+// Sample Output:
+// 1
+console.log("Q9 ]*****")
+                //without
+                for(let i=0;i<employees.length;i++){
+                    if(employees[i].skills.includes("Social Media")){
+                        console.log(employees[i].name+" :"+employees[i].skills);
+                    }
+                }
+
+                //with
+                let ans9=employees.filter(item=>item.skills.includes("Social Media"))
+                                  .map(item=>( {name:item.name,sikls:item.skills}))
+                           console.log(ans9);       
+
+
+// Q10. Create a new array containing the names of all employees, and then convert this array into a comma-separated string. Print the resulting string.
+// Sample Output:
+// Alice Johnson, Bob Smith, Carol White, Dave Brown, Eve Davis
+console.log("Q10 ]****")
+              //without
+              let newarr=[];
+              for(let i=0;i<employees.length;i++){
+                newarr.push(employees[i].name);
+              }
+              console.log(newarr.toString());
+
+              //with
+              let ans10=employees.map(item=>item.name);
+              console.log(ans10.toString());
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var employees = [
+    { name: "Alice Johnson", department: "Marketing", age: 29, yearsAtCompany: 4, 
+            skills: ["SEO", "Content Creation", "Social Media"], email: "alice.johnson@example.com" },
+    { name: "Bob Smith", department: "Engineering", age: 35, yearsAtCompany: 7, 
+            skills: ["Java", "C++", "System Design"], email: "bob.smith@example.com" },
+    { name: "Carol White", department: "HR", age: 40, yearsAtCompany: 10, 
+            skills: ["Recruitment", "Employee Relations", "Training", "Management"], email: "carol.white@example.com" },
+    { name: "Dave Brown", department: "Finance", age: 28, yearsAtCompany: 3, 
+            skills: ["Financial Analysis", "Budgeting", "Tax Planning"], email: "dave.brown@example.com" },
+    { name: "Eve Davis", department: "Engineering", age: 30, yearsAtCompany: 5, 
+            skills: ["Java", "Machine Learning", "Data Analysis"], email: "eve.davis@example.com" }
+];
+
+
+// Q11. Check if there is any employee who has "Tax Planning" as one of their skills. Print a message indicating whether such an employee exists or not.
+// Sample Output:
+// Yes, there is an employee with "Tax Planning" as one of their skills.
+console.log("Q11 ]*****")
+          //without
+          for( let i=0;i<employees.length;i++){
+                if(employees[i].skills.includes("Tax Planning")){
+                        console.log(employees[i].name+" :"+"  Yes, there is an employee with Tax Planning as one of their skills.")
+                }
+          }
+
+          //with
+          let ans11=employees.filter(item=>item.skills.includes("Tax Planning"))
+                             .map(item=>item.name+" :"+"  Yes, there is an employee with Tax Planning as one of their skills");
+                  console.log(ans11);           
+
+// Q12. Extract and print the domain names from the email addresses of all employees.
+// Sample Output:
+// example.com
+
+// Q13. Create a new array that includes only the employees who work in the "HR" department. Print this new array.
+// Sample Output:
+// [
+//   { name: "Carol White", department: "HR", age: 40, yearsAtCompany: 10, skills: ["Recruitment", "Employee Relations", "Training"], email: "carol.white@example.com" }
+// ]
+console.log("Q13 ]***")
+             //without
+
+             let H_arr=[];
+             for(let i=0;i<employees.length;i++){
+                if(employees[i].department.includes("HR"))
+             {
+                H_arr.push(employees[i]);
+             }
+             }
+             console.log(H_arr);
+
+             //with
+             let ans13=employees.filter(item=>item.department.includes("HR"))
+                                .map(item=>item);
+                        console.log(ans13);        
+// Q14. Determine the longest skill listed by any employee and print the name of the employee who has this skill.
+// Sample Output:
+// Carol White: "Employee Relations"
+console.log("Q14 ]****")
+           //without
+       
+
+// Q15. Print the names of employees whose years at the company are 4 or fewer.
+// Sample Output:
+// Alice Johnson
+// Dave Brown
+console.log("Q15 ]****")
+             //without
+             for( let i=0;i<employees.length;i++){
+                if(employees[i].yearsAtCompany <= 4){
+                        console.log(employees[i].name);
+                }
+             }
+
+             //with
+             let ans15=employees.filter(item=>item.yearsAtCompany <=4)
+                                .map(item=>item.name);
+                      console.log(ans15);          
+
+// Q16. Create a new array that includes employees who have exactly 3 skills listed. Print the names of these employees.
+// Sample Output:
+// Alice Johnson
+// Dave Brown
+console.log("Q16 ]****")
+              //without
+              let S_arr=[];
+              for(let i=0;i<employees.length;i++){
+                if(employees[i].skills.length ===3){
+                     S_arr.push(employees[i].name);
+                }
+              }
+              console.log(S_arr);
+
+              //with
+              let ans16=employees.filter(item=>item.skills.length ==3)
+                                  .map(item=>item.name);
+                    console.log(ans16);              
+
+
+// Q17. Use the map function to create an array of objects containing only the name and department of each employee. Print this new array.
+// Sample Output:
+// [
+//   { name: "Alice Johnson", department: "Marketing" },
+//   { name: "Bob Smith", department: "Engineering" },
+//   { name: "Carol White", department: "HR" },
+//   { name: "Dave Brown", department: "Finance" },
+//   { name: "Eve Davis", department: "Engineering" }
+// ]
+console.log("Q17 ]****")
+    let ans17=employees.map(item=>({name:item.name,department:item.department}));
+    console.log(ans17);
+
+
+// Q18. Find and print the employee with the least number of skills.
+// Sample Output:
+// Dave Brown
+console.log("Q18 ]*****")
+                //without
+                for(let i=0;i<employees.length;i++){
+                        if(employees[i].name == "Dave Brown"){
+                                console.log(employees[i].name+ " :"+employees[i].skills);
+                        }
+                }
+
+                //with
+                let ans18=employees.filter(item=>item.name.includes("Dave Brown"))
+                                   .map(item=>item.name+" :"+item.skills);
+                          console.log(ans18);         
+
+// Q19. Check if all employees have at least one skill in the "Engineering" department. Print a message indicating whether this condition is met.
+// Sample Output:
+// No, not all employees have at least one skill in the "Engineering" department.
+console.log("Q19 ]****")
+                //without
+              
+
+// Q20. Create an array of strings where each string describes an employee’s name and their department. Print this array.
+// Sample Output:
+// [
+//   "Alice Johnson - Marketing",
+//   "Bob Smith - Engineering",
+//   "Carol White - HR",
+//   "Dave Brown - Finance",
+//   "Eve Davis - Engineering"
+// ]
+console.log("Q20 ]****")
+              //without
+              let new_name=[];
+              for(let i=0;i<employees.length;i++){
+                new_name.push(employees[i].name+" - "+employees[i].department)
+              }
+              console.log(new_name);
+
+              //with
+              var asn20 =employees.map(item=>{
+                return item.name+"  - "+item.department;
+              })
+              console.log(asn20);
+    </script>
+</body>
+</html>
